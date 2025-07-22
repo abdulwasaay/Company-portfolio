@@ -22,7 +22,7 @@ const TrustedPartners = () => {
                         width={265}
                         height={95}
                         priority
-                        className=" max-[881px]:!w-[122px]"
+                        className="max-[653px]:!w-[122px] max-[881px]:!w-[190px]"
                     />
                 </motion.div>
                 <motion.div
@@ -33,10 +33,10 @@ const TrustedPartners = () => {
                     <Image
                         src={"/google.png"}
                         alt="trustpilot"
-                        width={239}
+                        width={219}
                         height={95}
                         priority
-                        className=" max-[881px]:!w-[102px]"
+                        className="max-[653px]:!w-[102px] max-[881px]:!w-[172px]"
                     />
                 </motion.div>
                 <motion.div
@@ -47,7 +47,7 @@ const TrustedPartners = () => {
                     <Image
                         src={"/clutch.png"}
                         alt="trustpilot"
-                        width={259}
+                        width={200}
                         height={153}
                         priority
                         className="max-[653px]:!w-[102px] max-[881px]:!w-[152px]"
