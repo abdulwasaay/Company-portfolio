@@ -12,10 +12,10 @@ const NavBarLatest = () => {
 
     const buttonStyles = {
         color: "#01157F",
-        backgroundColor: "#fff"
+        backgroundColor: "#fff",
+        '&:hover': { color: "white" }
     }
     const buttonHoverStyles = {
-        color: "#fff",
         background: "linear-gradient(to right, #00157F, #4C5F97)"
     }
 

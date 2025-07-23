@@ -5,7 +5,7 @@ interface ButtonProps extends React.ComponentProps<typeof Button> {
     clickHandler: () => void;
     sx?: any;
     size?: "small" | "medium" | "large";
-    hoverStyles?: { color: string, background: string };
+    hoverStyles?: { background: string };
 }
 
 const ButtonLatest: React.FC<ButtonProps> = ({ title, clickHandler, sx, size = "medium", hoverStyles, ...rest }) => {
@@ -31,7 +31,7 @@ const ButtonLatest: React.FC<ButtonProps> = ({ title, clickHandler, sx, size = "
     return (
         <Button
             onClick={clickHandler}
-            className='relative overflow-hidden z-10 group hover:!text-amber-50'
+            className={`relative overflow-hidden z-10 group `}
             sx={{
                 fontSize: typography(),
                 padding: padding(),
