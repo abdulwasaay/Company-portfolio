@@ -22,7 +22,7 @@ const HomeBanner = () => {
 
     return (
         <div className=" w-full" style={sx}>
-            <div className='py-[60px] md:py-[100px] xl:py-[122px] 2xl:py-[162px] px-[30px] xl:px-[159px] flex gap-10 md:gap-3 flex-col items-center md:flex-row md:justify-center'>
+            <div className=' pt-[160px] pb-[80px] md:pt-[202px] md:pb-[132px] px-[30px] xl:px-[159px] flex gap-10 md:gap-3 flex-col items-center md:flex-row md:justify-center'>
                 <motion.div
                     initial={{ opacity: 0, x: -100 }}
                     whileInView={{ opacity: 1, x: 0 }}

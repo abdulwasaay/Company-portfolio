@@ -26,13 +26,13 @@ const NavBarLatest = () => {
         return <LinkLatest key={ind} linkClasses="hover:font-normal text-[#fff]" title={navs.title} link={navs.link} />
     })
     return (
-        <div className="bg-[#060F24] py-3 px-[30px] xl:px-[159px]">
+        <div className=" fixed w-full top-0 z-999 bg-[#060F24] py-3 px-[30px] xl:px-[159px]">
             <nav className=" flex justify-between items-center">
                 <Image
                     src={"/logo.png"}
                     alt="Brand Logo"
-                    width={85}
-                    height={99}
+                    width={65}
+                    height={89}
                     priority
                 />
                 <div className=" flex gap-10 lg:gap-24 max-[768px]:hidden">
