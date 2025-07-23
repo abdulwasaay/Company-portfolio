@@ -1,0 +1,24 @@
+.strength-shape-right::before {
+    content: "";
+    background-image: url('/shapes/strength-shape-right.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: -340px;
+    right: -100px;
+    width: 350px;
+    height: 662px;
+    z-index: -1;
+}
+
+@media (max-width:768px) {
+    .strength-shape-right::before {
+        right: -160px;
+    }
+}
+
+@media (max-width:510px) {
+    .strength-shape-right::before {
+        right: -220px;
+    }
+}
