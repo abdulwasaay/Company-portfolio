@@ -28,7 +28,7 @@ const HomeBanner = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <p className=' text-[#fff] text-center md:text-start text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>Innovation Beyond <span className='font-bold'>Boundaries with Sphere Tech</span></p>
+                    <p className=' text-[#fff] text-center md:text-start text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl'>Innovation Beyond <span className='font-bold'>Boundaries with Sphere Tech</span></p>
                     <p className=' text-[#fff] text-center md:text-start text-md mt-[32px]'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
                     <div className=' flex justify-center md:block'>
                         <LinkLatest

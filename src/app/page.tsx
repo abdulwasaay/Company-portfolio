@@ -1,4 +1,6 @@
+import AboutBanner from "./flavors/HomeFlavors/ABoutBanner";
 import HomeBanner from "./flavors/HomeFlavors/HomeBanner";
+import StrengthBanner from "./flavors/HomeFlavors/StrengthBanner";
 import TrustedPartners from "./flavors/HomeFlavors/trustedPartners";
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <div className=" w-full">
       <HomeBanner />
       <TrustedPartners />
+      <AboutBanner />
+      <StrengthBanner />
     </div >
   );
 }
