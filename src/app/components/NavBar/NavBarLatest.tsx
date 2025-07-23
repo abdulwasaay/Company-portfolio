@@ -1,9 +1,30 @@
+"use client"
 import Image from "next/image"
 import { navRoutes, smallNavRoutes } from "@/app/constants/Routes"
 import LinkLatest from "../LinkLatest"
 import ResponsiveNav from "./ResponsiveNav"
+import { usePathname } from "next/navigation"
+import { useEffect, useState } from "react"
 
 const NavBarLatest = () => {
+
+    const pathName = usePathname();
+    const routesArr = ["/"];
+    const [isSticky, setSticky] = useState<boolean>(false);
+    const isShow = routesArr.includes(pathName);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 350) {
+                setSticky(true);
+            } else {
+                setSticky(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [])
 
     type navTypes = {
         title: string,
@@ -26,7 +47,7 @@ const NavBarLatest = () => {
         return <LinkLatest key={ind} linkClasses="hover:font-normal text-[#fff]" title={navs.title} link={navs.link} />
     })
     return (
-        <div className=" fixed w-full top-0 z-999 bg-[#060F24] py-3 px-[30px] xl:px-[159px]">
+        <div className={`${isShow ? isSticky ? "fixed w-full top-0 z-999 bg-[#060F24]" : "absolute w-full backdrop-blur-sm" : isSticky ? "fixed w-full top-0 z-999 bg-[#060F24]" : "bg-[#060F24]"} py-3 px-[30px] xl:px-[159px]`}>
             <nav className=" flex justify-between items-center">
                 <Image
                     src={"/logo.png"}
