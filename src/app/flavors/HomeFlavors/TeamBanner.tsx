@@ -67,8 +67,8 @@ const TeamBanner = () => {
                     teamMembers?.map((team: any, ind) => (
                         <motion.div
                             key={ind}
-                            initial={!isMobile ? { opacity: 0, scale: 0 } : { opacity: 0, x: -100 }}
-                            whileInView={!isMobile ? { opacity: 1, scale: 1 } : { opacity: 1, x: 0 }}
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: !isMobile ? 0.2 : 0.5, delay: !isMobile ? team.delays : 0 }}
                             className="w-full max-w-none md:max-w-[400px] lg:max-w-[300px] sm:basis-[48%] md:basis-[38%] lg:basis-[30%] xl:basis-[22%] sm:max-w-[300px] flex-grow"
                         >
