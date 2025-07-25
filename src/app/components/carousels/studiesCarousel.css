@@ -1,0 +1,14 @@
+.custom-swiper-studies .swiper-pagination {
+    position: static !important;
+    /* bullets now static, not over image */
+    text-align: center;
+    z-index: 1;
+    bottom: 0.5;
+    padding-top: 22px;
+}
+
+.custom-swiper-studies .swiper-pagination-bullet {
+    background-color: #848484;
+    /* Tailwind gray-300 */
+    opacity: 1;
+}
