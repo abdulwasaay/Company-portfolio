@@ -1,10 +1,13 @@
-import AboutBanner from "./flavors/HomeFlavors/ABoutBanner";
-import HomeBanner from "./flavors/HomeFlavors/HomeBanner";
-import StrengthBanner from "./flavors/HomeFlavors/StrengthBanner";
-import StudiesSection from "./flavors/HomeFlavors/StudiesBanner";
-import TeamBanner from "./flavors/HomeFlavors/TeamBanner";
-import TestimonialSection from "./flavors/HomeFlavors/TestimonialSection";
-import TrustedPartners from "./flavors/HomeFlavors/trustedPartners";
+import {
+  AboutBanner,
+  HomeBanner,
+  InsightsSection,
+  StrengthBanner,
+  StudiesSection,
+  TeamBanner,
+  TestimonialSection,
+  TrustedPartners
+} from "./flavors/HomeFlavors";
 
 export default function Home() {
 
@@ -17,6 +20,7 @@ export default function Home() {
       <StudiesSection />
       <TeamBanner />
       <TestimonialSection />
+      <InsightsSection />
     </div >
   );
 }
