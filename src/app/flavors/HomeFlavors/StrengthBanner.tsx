@@ -12,7 +12,7 @@ const StrengthBanner = () => {
                     </h1>
                 </div>
             </div>
-            <div className=" mt-20 relative">
+            <div className=" mt-10 relative">
                 <StrengthCarousel />
                 <div className="bg-[#A2B3E3] w-full h-[70px] absolute top-[35%] translate-y-[-50%] left-0"></div>
             </div>
