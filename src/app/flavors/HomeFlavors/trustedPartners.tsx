@@ -1,12 +1,11 @@
-"use client"
 import Image from "next/image"
-import { motion } from 'framer-motion';
+import ViewPortAnimation from "@/app/components/framerAnimation";
 
 const TrustedPartners = () => {
     return (
         <>
             <div className="w-full flex justify-between items-center gap-[30px] px-[30px] xl:px-[159px]">
-                <motion.div
+                <ViewPortAnimation
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.6 }}
@@ -19,8 +18,8 @@ const TrustedPartners = () => {
                         priority
                         className="max-[653px]:!w-[122px] max-[881px]:!w-[190px]"
                     />
-                </motion.div>
-                <motion.div
+                </ViewPortAnimation>
+                <ViewPortAnimation
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.6, delay: 0.2 }}
@@ -33,8 +32,8 @@ const TrustedPartners = () => {
                         priority
                         className="max-[653px]:!w-[102px] max-[881px]:!w-[172px]"
                     />
-                </motion.div>
-                <motion.div
+                </ViewPortAnimation>
+                <ViewPortAnimation
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     transition={{ duration: 0.6, delay: 0.4 }}
@@ -47,7 +46,7 @@ const TrustedPartners = () => {
                         priority
                         className="max-[653px]:!w-[102px] max-[881px]:!w-[152px]"
                     />
-                </motion.div>
+                </ViewPortAnimation>
             </div>
         </>
     )

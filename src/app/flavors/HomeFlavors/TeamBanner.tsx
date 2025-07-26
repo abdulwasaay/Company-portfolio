@@ -1,16 +1,13 @@
-"use client"
+import ViewPortAnimation from '@/app/components/framerAnimation';
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { motion } from 'framer-motion';
 
 const TeamBanner = () => {
     const sxBacks = {
         backgroundImage: "url(/teams-Banner.png)",
     }
-    const isMobile = useMediaQuery('(max-width:768px)');
 
     const teamMembers = [
         {
@@ -49,7 +46,7 @@ const TeamBanner = () => {
                 backgroundSize: "cover"
             }}>
                 <div className='w-full flex justify-center'>
-                    <motion.div
+                    <ViewPortAnimation
                         initial={{ opacity: 0, y: -100 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.2, delay: 0.3 }}
@@ -59,17 +56,17 @@ const TeamBanner = () => {
                         <h1 className="text-center text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold mt-2 text-white">
                             Our Dream Team, Your Trusted Partners
                         </h1>
-                    </motion.div>
+                    </ViewPortAnimation>
                 </div>
             </div>
             <div className='flex flex-wrap justify-center gap-x-4 gap-y-8 w-full px-4 md:px-8 relative bottom-[180px]'>
                 {
                     teamMembers?.map((team: any, ind) => (
-                        <motion.div
+                        <ViewPortAnimation
                             key={ind}
-                            initial={!isMobile ? { opacity: 0, scale: 0 } : { opacity: 0, x: -100 }}
-                            whileInView={!isMobile ? { opacity: 1, scale: 1 } : { opacity: 1, x: 0 }}
-                            transition={{ duration: !isMobile ? 0.2 : 0.5, delay: !isMobile ? team.delays : 0 }}
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.2, delay: team.delays }}
                             className="w-full max-w-none md:max-w-[400px] lg:max-w-[300px] sm:basis-[48%] md:basis-[38%] lg:basis-[30%] xl:basis-[22%] sm:max-w-[300px] flex-grow"
                         >
                             <Card
@@ -97,7 +94,7 @@ const TeamBanner = () => {
                                     </div> */}
                                 </CardContent>
                             </Card>
-                        </motion.div>
+                        </ViewPortAnimation>
                     ))
                 }
             </div>
